@@ -1,4 +1,37 @@
-# grease
+<img src="https://i.imgur.com/TsDkHvI.png" alt="grease" />
+
+  [![NPM version][npm-image]][npm-url]
+  [![build status][travis-image]][travis-url]
+  [![Test coverage][coveralls-image]][coveralls-url]
+
+  Simple packaging for cross-platform Cordova and node-webkit applications.
+
+## Installation
+
+As a CLI:
+
+````
+npm install -g grease
+````
+
+As a module:
+
+````
+npm install --save grease
+````
+
+## Usage as a CLI
+
+## Usage as a module
+
+## Running tests
+
+To run tests, clone the repository and run the following from inside the directory:
+
+````
+npm install
+npm test
+````
 
 # License
 
@@ -17,3 +50,11 @@ as the name is changed.
 
  0. You just DO WHAT THE FUCK YOU WANT TO.
 ````
+
+[npm-image]: https://img.shields.io/npm/v/grease.svg?style=flat
+[npm-url]: https://npmjs.org/package/grease
+[travis-image]: https://img.shields.io/travis/ecto/grease.svg?style=flat
+[travis-url]: https://travis-ci.org/ecto/grease
+[coveralls-image]: https://img.shields.io/coveralls/ecto/grease.svg?style=flat
+[coveralls-url]: https://coveralls.io/r/ecto/grease?branch=master
+
