@@ -53,7 +53,7 @@ npm install
 npm test
 ````
 
-# License
+## License
 
 ````
            DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
