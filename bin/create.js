@@ -2,13 +2,7 @@ var fs = require('fs');
 var path = require('path');
 var mkdirp = require('mkdirp');
 var prompt = require('prompt');
-var cordovaLib = require('cordova-lib');
-var cordova = cordovaLib.cordova;
-
-cordovaLib.events.on('results', console.log);
-cordovaLib.events.on('log', console.log);
-cordovaLib.events.on('warn', console.warn);
-cordovaLib.events.on('verbose', console.log);
+var cordova = require('../lib/cordova');
 
 prompt.message = '';
 prompt.delimiter = '';
@@ -99,6 +93,12 @@ function createApplication (name) {
   var template = '../template/';
 
   mkdir(name, function () {
+    cp(name, '.gitignore');
+
+    replaceAndCopy(name, 'package.json', {
+      'name': name
+    });
+
     mkdir(name + '/src', function () {
       cp(name, 'src/index.html');
       replaceAndCopy(name, 'src/package.json', {
@@ -115,10 +115,6 @@ function createApplication (name) {
 
       mkdir(name + '/test', function () {
         cp(name, 'test/basic.js');
-      });
-
-      replaceAndCopy(name, 'package.json', {
-        'name': name
       });
 
       mkdir(name + '/res', function () {
