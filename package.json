@@ -1,6 +1,6 @@
 {
   "name": "grease",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Painless cross-platform JS application packager",
   "main": "grease.js",
   "bin": {
