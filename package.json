@@ -1,0 +1,26 @@
+{
+  "name": "grease",
+  "version": "0.0.0",
+  "description": "",
+  "main": "grease.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ecto/grease.git"
+  },
+  "keywords": [
+    "cordova",
+    "node-webkit"
+  ],
+  "author": "Cam Pedersen",
+  "license": "WTFPL",
+  "bugs": {
+    "url": "https://github.com/ecto/grease/issues"
+  },
+  "homepage": "https://github.com/ecto/grease"
+}
