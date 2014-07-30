@@ -1,3 +1,44 @@
 #!/usr/bin/env node
 
-console.log('hello world');
+var cli = require('yargs');
+
+cli
+  .strict()
+  .usage('Cross-platform JS application packager.\nUsage: grease [command] [options]')
+
+cli
+  .example('grease create [name]', 'create a new project')
+  .example('grease build [platform]', 'builds all or specified platform (prepare + compile)')
+  .example('grease prepare [platform]', 'copy all files from src to res directory for all or specified platform')
+  .example('grease compile [platform]', 'compile applications for all or specified platform')
+  .example('grease run [platform]', 'emulate specified platform or run desktop application');
+
+cli
+  .alias('f', 'force')
+  .describe('f', 'Force operation');
+
+cli
+  .alias('h', 'help')
+  .describe('h', 'Show this message');
+
+cli
+  .alias('v', 'version')
+  .describe('v', 'Show version number');
+
+if (!cli.argv._.length) {
+  cli.showHelp();
+  process.exit(1);
+};
+
+try {
+  require('./' + cli.argv._[0])(cli);
+} catch (e) {
+  if (e.message == 'Cannot find module \'./' + cli.argv._[0] + '\'') {
+    console.log('Invalid command:', cli.argv._[0], '\n');
+    cli.showHelp();
+  } else {
+    console.log(e.stack);
+  }
+
+  process.exit(1);
+}
