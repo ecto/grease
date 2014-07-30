@@ -6,6 +6,9 @@
   "directories": {
     "test": "test"
   },
+  "bin": {
+    "grease": "bin/grease"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -22,5 +25,5 @@
   "bugs": {
     "url": "https://github.com/ecto/grease/issues"
   },
-  "homepage": "https://github.com/ecto/grease"
+  "homepage": "http://grease.io"
 }
