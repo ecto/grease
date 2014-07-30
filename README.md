@@ -20,9 +20,29 @@ As a module:
 npm install --save grease
 ````
 
-## Usage as a CLI
+## Quick start
+
+````
+grease create foo
+cd foo
+grease run
+````
+
+For more information, just run
+
+````
+grease
+````
+
+for usage information.
 
 ## Usage as a module
+
+````javascript
+var grease = require('grease');
+
+grease.run();
+````
 
 ## Running tests
 
