@@ -93,8 +93,6 @@ function createApplication (name) {
   var template = '../template/';
 
   mkdir(name, function () {
-    cp(name, '.gitignore');
-
     replaceAndCopy(name, 'package.json', {
       'name': name
     });
